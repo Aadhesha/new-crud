@@ -1,0 +1,60 @@
+:host {
+    display: flex;
+    margin: 100px 0pxS;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+}
+
+.mat-card {
+    border-radius: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mat-card-title {
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    padding-top: 2rem;
+    color: rgb(75,64,78);
+}
+
+.mat-card-content {
+    display: flex;
+    justify-content: center;
+    width: 25rem;
+}
+
+.mat-form-field {
+    width: 100%;
+    min-width: 300px;
+    /* padding-left: 1rem; */
+    
+}
+
+.btn_register {
+    color: white;
+    justify-content: center;
+    background-color: rgb(23,150,23);
+    height: 2.5rem;
+    width: 21.5rem;
+    border-radius: 1rem;
+}
+
+.btn_register:hover {
+    background-color: rgb(23,170,23);
+    box-shadow: 0px 8px 8px rgb(177,175,175);
+}
+
+.mat-error {
+    text-align: right;
+}
+
+a:link {
+    text-decoration: none;
+    color: rgb(75,50,82);
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

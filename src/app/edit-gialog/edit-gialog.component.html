@@ -1,0 +1,62 @@
+<mat-card>
+    <mat-card-title>Register</mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="editForm">
+            <div class="row">
+                <p>
+                    <mat-form-field> 
+                        <input type="text" matInput placeholder="Name" formControlName="name">
+                        <mat-error>Name is required</mat-error>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field> 
+                        <input type="email" matInput placeholder="Email Address" formControlName="email">
+                        <mat-error>Email address is required</mat-error>
+                    </mat-form-field>
+                </p>
+            </div>
+         
+            <p>
+                <mat-form-field> 
+                    <input type="age" matInput placeholder="Age" formControlName="age">
+                    <mat-error>Age is required</mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field> 
+                    <input type="country" matInput placeholder="Country" formControlName="country">
+                    <mat-error>Country is required</mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field> 
+                    <input type="state" matInput placeholder="State" formControlName="state">
+                    <mat-error>State is required</mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field> 
+                    <input type="city" matInput placeholder="City" formControlName="city">
+                    <mat-error>City is required</mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field> 
+                    <input type="zipcode" matInput placeholder="Zip-Code" formControlName="zipcode">
+                    <mat-error>Zip-Code is required</mat-error>
+                </mat-form-field>
+            </p>
+            <!-- <div class="btn">
+                <button class="btn_edit" type="submit" mat-button>Edit</button> &nbsp;
+            </div> -->
+        </form>
+        <div class="btn">
+            <button class="btn_edit" (click)="submit()" mat-button>Submit</button>&nbsp;&nbsp;
+            <button class="btn_cancel" (click)="onCancel()" mat-button>Cancel</button>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+
+

@@ -1,0 +1,66 @@
+<mat-card>
+    <mat-card-title>Register</mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="registerForm" (ngSubmit)="submit()">
+            <p>
+                <mat-form-field>
+                    <input type="text" matInput placeholder="Name" formControlName="name">
+                    <mat-error>Name is required</mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                    <input type="text" matInput placeholder="Email Address" formControlName="email">
+                    <mat-error>Email address is required</mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                    <mat-label>Select an option</mat-label>
+                    <mat-select formControlName="age">
+                        <mat-option>None</mat-option>
+                        <mat-option value="option1">Below 18 years</mat-option>
+                        <mat-option value="option2">Above 18 years</mat-option>
+                    </mat-select>
+                    <mat-error>Age is required</mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                    <input type="text" matInput placeholder="Country" formControlName="country">
+                    <mat-error>Country is required</mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                    <input type="text" matInput placeholder="State" formControlName="state">
+                    <mat-error>State is required</mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                    <input type="text" matInput placeholder="City" formControlName="city">
+                    <mat-error>City is required</mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                    <input type="text" matInput placeholder="Zip-Code" formControlName="zipcode">
+                    <mat-error>Zip-Code is required</mat-error>
+                </mat-form-field>
+            </p>
+            <div>
+                <button class="btn_register" type="submit" mat-button>Register</button>
+            </div>
+        </form>
+    </mat-card-content>
+    <mat-card-content>
+        <div class="view">
+            <p>To view Registered User
+                <a routerLink='/view' routerLinkActive="Active">click here</a>
+            </p>
+
+        </div>
+    </mat-card-content>
+</mat-card>
+<router-outlet></router-outlet>

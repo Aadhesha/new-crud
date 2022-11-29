@@ -1,0 +1,50 @@
+.mat-form-field {
+    width: 15rem;
+}
+
+.btn {
+    display: inline-block;
+}
+
+.btn_edit {
+    color: white;
+    justify-content: center;
+    background-color: rgb(72, 23, 150);
+    height: 2.5rem;
+    width: 5rem;
+    border-radius: 1rem;
+}
+
+.btn_edit:hover {
+    background-color: rgb(84, 32, 167);
+    box-shadow: 0px 8px 8px rgb(177,175,175);
+}
+
+.btn_cancel {
+    color: white;
+    justify-content: center;
+    background-color: rgb(179, 38, 38);
+    height: 2.5rem;
+    width: 5rem;
+    border-radius: 1rem;
+}
+
+.btn_cancel:hover {
+    background-color: rgb(189, 26, 26);
+    box-shadow: 0px 8px 8px rgb(177,175,175);
+}
+
+
+.mat-error {
+    text-align: right;
+}
+
+a:link {
+    text-decoration: none;
+    color: rgb(75,50,82);
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

@@ -1,0 +1,69 @@
+<mat-card>
+    <mat-card-title>Registered Users</mat-card-title>
+    <mat-card-content>
+        <table mat-table [dataSource]="users" class="mat-elevation-z8">
+         
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef> User ID </th>
+              <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+          
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+          
+            <ng-container matColumnDef="email">
+              <th mat-header-cell *matHeaderCellDef> Email Address </th>
+              <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+            </ng-container>
+          
+            <ng-container matColumnDef="age">
+              <th mat-header-cell *matHeaderCellDef> Age </th>
+              <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+            </ng-container>
+        
+            <ng-container matColumnDef="country">
+                <th mat-header-cell *matHeaderCellDef> Country </th>
+                <td mat-cell *matCellDef="let element"> {{element.country}} </td>
+            </ng-container>
+        
+            <ng-container matColumnDef="state">
+                <th mat-header-cell *matHeaderCellDef> State </th>
+                <td mat-cell *matCellDef="let element"> {{element.state}} </td>
+            </ng-container>
+        
+            <ng-container matColumnDef="city">
+                <th mat-header-cell *matHeaderCellDef> City </th>
+                <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+            </ng-container>
+        
+            <ng-container matColumnDef="zipcode">
+                <th mat-header-cell *matHeaderCellDef> Zip Code </th>
+                <td mat-cell *matCellDef="let element"> {{element.zipcode}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef> Actions </th>
+                <td mat-cell *matCellDef="let row">        
+                    <a (click)="onEdit(row)">Edit</a>&nbsp;
+                    <a (click)="onDelete(row)">Delete</a>
+                </td> 
+            </ng-container>
+            
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+    </mat-card-content>
+    <mat-card-content>
+        <div class="register">
+            <p>To Register New User
+                <a [routerLink]="['/register']" routerLinkActive="Active">click here</a>
+            </p>
+            
+        </div>
+    </mat-card-content>
+    
+</mat-card>
+  
+<router-outlet></router-outlet>
